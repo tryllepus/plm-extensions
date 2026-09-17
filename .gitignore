@@ -17,3 +17,4 @@ package-lock.json
 !.gitkeep
 .DS_Store*
 run.sh
+environment.js
