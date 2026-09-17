@@ -121,7 +121,9 @@ const registry = {
                     'dragable', 'onDragStart', 'onDragEnd',
                     'dropable', 'onDragEnter', 'onDragOver', 'onDragLeave', 'onDrop',
                     'groupBy', 'groupLayout',
+                    'limit',
                     'openOnDblClick',
+                    'pagination',
                     'searchInFields', 'searchReturnFields', 'searchForExactMatch', 'searchInputLabel', 'searchButtonIcon', 'searchButtonLabel', 'searchBaseFilters', 'searchLogicClause', 'sortBy', 'stateColors',
                     'searchLatestOnly', 'searchReleasedOnly', 'searchWorkingOnly', 'hideWorking'
                 ],
@@ -1363,6 +1365,12 @@ const registry = {
                 description : "JSON array of {icon,fieldId,prefix} entries shown below the tile subtitle",
                 default     : '[]',
                 type        : 'textarea'
+            },
+            tileRevision : {
+                title       : 'Tile Revision',
+                description : "When enabled, revision of each item will be displayed in tile",
+                default     : false,
+                type        : 'boolean'
             },
         },
 

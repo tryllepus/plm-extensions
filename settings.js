@@ -77,7 +77,8 @@ exports.common = {
     workspaces : {
         items : {
             defaultBOMView : 'Tree Navigator', // This BOM view should contain columns Descriptor, Item and BOM Quantity only
-            fieldIdNumber  : 'NUMBER'
+            fieldIdNumber  : 'NUMBER',
+            fieldIdImage   : 'IMAGE'
         }
     },
 
@@ -113,6 +114,8 @@ exports.common = {
             settings      : false,
             fullscreen    : true,
             markup        : false,
+            tags          : false,
+            listViews     : false,
             hide          : true,
             ghosting      : true,
             highlight     : true,
@@ -1296,14 +1299,19 @@ exports.applications = {
         autoClick        : true,
         openMostRecent   : true,
         panels : {
-            insertSearch : { 
-                autoClick    : true,
-                inputLabel   : 'Enter part number',
-                limit        : 10,
-                number       : true,
-                pagination   : true,
-                contentSize  : 'xs',
-                tileImage    : true
+            insertWorkspaceSearch : { 
+                autoClick         : true,
+                headerLabel       : 'Search',
+                searchInputLabel  : 'Enter part number',
+                searchButtonLabel : '',
+                contentSize       : 'xs',
+                limit             : 15,
+                number            : true,
+                pagination        : true,
+                searchLatestOnly  : true,
+                tileImage         : true,
+                tileImageFieldId  : 'IMAGE',
+                tileRevision      : true
             },
             insertRecentItems : { 
                 headerLabel   : 'Recent Items',
@@ -1370,6 +1378,8 @@ exports.applications = {
             settings      : false,
             fullscreen    : true,
             markup        : false,
+            tags          : true,
+            listViews     : true,
             hide          : true,
             ghosting      : true,
             highlight     : true,
